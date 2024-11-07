@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0
+        }
+        body {
+            background-color: lightblue;
+        }
+        .big_container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .required::after {
+            content: "*";
+            color: red;
+        }
+        .container {
+            padding: 10px;
+            background-color: white;
+            margin-top: 20px;
+            width: 400px;
+            align-items: center;
+            box-shadow: 10px 10px 10px gray;
+            border-radius: 10px;
+        }
+        form {
+            margin: 20px;
+        }
+        input, select {
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: cornflowerblue;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+        }
+        textarea {
+            min-height: 100px;
+            min-width: 100%;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <div class="big_container">
+        <div class="container">
+            <h2 style="text-align: center;">Create Account</h2>
+            <p style="text-align: center;">Fill in the details to get started</p>
+            <form>
+                <label for="Fullname" class="required">Full Name</label>
+                <br>
+                <input type="text" id="Fullname" name="Fullname" placeholder="Full Name" required>
+                <br>
+                <label for="email" class="required">Email</label>
+                <br>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                <br>
+                <label for="password" class="required">Password</label>
+                <br>
+                <input type="password" id="password" name="password" required>
+                <p style="color: gray; font-size: 14px;">Must be at least 8 characters long</p>
+                <br>
+                <label for="Role">Role</label>
+                <br>
+                <select name="Role" placeholder="Select a role">
+                    <option value="This">1</option>
+                    <option value="That">2</option>
+                    <option value="This one">3</option>
+                </select>
+                <br>
+                <label for="Bio">Bio</label>
+                <br>
+                <textarea id="Bio" name="Bio" placeholder="Tell us about yourself" maxlength="100"></textarea>
+                <br>
+                <p style="color: gray; font-size: 14px;">Keep it short and sweet</p>
+                <br>
+                <input type="radio" id="choices" name="choices" value="select"> <span class="required">I agree to terms and conditions</span>
+                <br>
+                <button>Create Account</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
